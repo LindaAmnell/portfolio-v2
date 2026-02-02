@@ -1,0 +1,90 @@
+.start {
+  position: relative;
+  height: 100vh;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 30vh;
+  scroll-snap-align: start;
+}
+
+.start::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../../assets/meAndBilbo.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale(100%) brightness(0.35);
+  z-index: -1;
+}
+
+.start::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 16vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #0e0e0e);
+}
+
+.start-content {
+  text-align: center;
+  color: white;
+}
+
+.start-greeting {
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 3em;
+  margin-bottom: 1em;
+}
+
+.start-name {
+  font-size: 35px;
+  margin: 0.5em 0;
+}
+
+.start-role {
+  font-size: 29px;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+.start-icons {
+  position: absolute;
+  bottom: 9em;
+  left: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  pointer-events: auto;
+}
+
+.icon {
+  font-size: 28px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .start {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .start-name {
+    font-size: 4em;
+  }
+
+  .start-role {
+    font-size: 2em;
+  }
+}
