@@ -1,13 +1,18 @@
+import { homeText } from "../../data/homeText";
+import type { Language } from "../../types/language";
 import "./Home.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-
-const Home = () => {
+import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
+type Props = {
+  language: Language;
+};
+const Home = ({ language }: Props) => {
+  const text = homeText[language];
   return (
     <section className="start">
       <div className="start-content">
-        <h1 className="start-greeting">Hi!</h1>
-        <h2 className="start-name">I’m Linda</h2>
-        <h3 className="start-role">Frontend developer</h3>
+        <h1 className="start-greeting">{text.greeting}</h1>
+        <h2 className="start-name">{text.name}</h2>
+        <h3 className="start-role">{text.role}</h3>
 
         <div className="start-icons">
           <a
@@ -21,6 +26,9 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer">
             <FaLinkedin className="icon" />
+          </a>
+          <a href="">
+            <FaRegEnvelope className="icon" />
           </a>
         </div>
       </div>

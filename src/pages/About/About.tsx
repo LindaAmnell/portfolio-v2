@@ -1,40 +1,31 @@
+import { aboutText } from "../../data/aboutText";
 import { skills } from "../../data/skills";
 import "./About.css";
+import { sectionTitles } from "../../data/sectionTitles";
+import type { Language } from "../../types/language";
 
-const About = () => {
+type Props = {
+  language: Language;
+};
+
+const About = ({ language }: Props) => {
   return (
     <section className="about" id="about">
-      <h2 className="section-title">About</h2>
+      <h2 className="section-title">{sectionTitles[language].about}</h2>
 
       <div className="about-text">
-        <p>
-          Hi! I’m Linda, a frontend developer with a degree in frontend
-          development and a strong focus on creating clean, user-friendly
-          interfaces.
-        </p>
-
-        <p>
-          I work mainly with React, TypeScript, HTML, and CSS, and I enjoy
-          turning ideas into well-structured and intuitive solutions.
-        </p>
-        <p>
-          Right now, I’m expanding my skill set by studying .NET Cloud, with a
-          growing interest in how frontend and backend work together in scalable
-          applications.
-        </p>
-        <p>
-          Outside of coding, I enjoy staying active and solving puzzles—things
-          that keep me curious and focused.
-        </p>
+        {aboutText[language].map((text) => (
+          <p key={text}>{text}</p>
+        ))}
       </div>
 
       <div className="about-skills">
-        <h3>Technical knowledge</h3>
-        <ul className="skills-list">
+        <h3>{sectionTitles[language].technicalKnowledge}</h3>{" "}
+        <div className="skills-list">
           {skills.map((skill) => (
-            <li key={skill}>{skill}</li>
+            <p key={skill}>{skill}</p>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

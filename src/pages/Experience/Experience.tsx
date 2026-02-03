@@ -1,12 +1,17 @@
-import { experienceList } from "../../data/experienceList";
+import { experienceList } from "../../data/experienceList.ts";
+import { sectionTitles } from "../../data/sectionTitles.ts";
+import type { Language } from "../../types/language.ts";
 import "./Experience.css";
 
-const Experience = () => {
+type Props = {
+  language: Language;
+};
+const Experience = ({ language }: Props) => {
   return (
     <section className="experience">
-      <h2 className="section-title">Experience</h2>
+      <h2 className="section-title">{sectionTitles[language].experience}</h2>
 
-      {experienceList.map((item) => (
+      {experienceList[language].map((item) => (
         <div className="experience-card" key={item.company}>
           <h3 className="experience-heading">
             {item.title} – {item.company}
