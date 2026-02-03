@@ -20,7 +20,7 @@ const About = () => {
         <p>
           Right now, I’m expanding my skill set by studying .NET Cloud, with a
           growing interest in how frontend and backend work together in scalable
-          applications.w frontend and backend
+          applications.
         </p>
         <p>
           Outside of coding, I enjoy staying active and solving puzzles—things
@@ -29,7 +29,7 @@ const About = () => {
       </div>
 
       <div className="about-skills">
-        <h3>Skills</h3>
+        <h3>Technical knowledge</h3>
         <ul className="skills-list">
           {skills.map((skill) => (
             <li key={skill}>{skill}</li>

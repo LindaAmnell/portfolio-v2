@@ -2,12 +2,10 @@
   position: relative;
   height: 100vh;
   overflow: clip;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 30vh;
-  scroll-snap-align: start;
 }
 
 .start::before {
@@ -42,8 +40,7 @@
   font-size: 40px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-align: left;
-  margin-left: 3em;
+  margin-right: 2em;
   margin-bottom: 1em;
 }
 

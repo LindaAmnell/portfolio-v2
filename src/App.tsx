@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./pages/About/About.tsx";
+import Experience from "./pages/Experience/Experience.tsx";
 import Home from "./pages/Home/Home.tsx";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Home />
       <About />
+      <Experience />
     </>
   );
 }

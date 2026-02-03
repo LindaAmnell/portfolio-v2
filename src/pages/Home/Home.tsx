@@ -10,8 +10,18 @@ const Home = () => {
         <h3 className="start-role">Frontend developer</h3>
 
         <div className="start-icons">
-          <FaGithub className="icon" />
-          <FaLinkedin className="icon" />
+          <a
+            href="https://github.com/LindaAmnell"
+            target="_blank"
+            rel="noopener noreferrer">
+            <FaGithub className="icon" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/linda-amnell-54a803297/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <FaLinkedin className="icon" />
+          </a>
         </div>
       </div>
     </section>
